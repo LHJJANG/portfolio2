@@ -1,0 +1,488 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+li{list-style: none;}
+#fp-nav ul li a span{
+    background: #fff;
+}
+#fp-nav ul li .active span{
+    background: #d44269;
+}
+.m_btn{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 220px;
+    top: 20%;
+    transform: translateY(-20%);
+   z-index: 10;
+    margin-top: -10px;
+  
+}
+.m_btn .line{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.m_btn .line span{
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}
+.m_btn .line span::before{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: -14px;
+    transition: all 0.5s ease;
+}
+.m_btn .line span::after{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    transition: all 0.5s ease;
+}
+.m_btn .line.on span{
+    background: rgba(0,0,0,0);
+    
+}
+.m_btn .line.on span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+.m_btn .line.on span::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.cover{
+    position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);z-index: 10;
+    text-align: center;display: none;
+}
+.cover .tit{
+    display: flex;width: 100%;
+}
+.cover .top{
+    position: absolute;
+    left: 30%;top: 50%;transform: translateX(-50%);margin-top: -200px;
+}
+.cover .top li{
+    margin-bottom: 50PX;
+}
+.cover .top li a{
+    color: #fff;font-size: 60px; font-weight: bold;
+}
+.cover .top li:first-child:hover a{
+    color: #F24405;
+}
+
+.cover .top li:nth-child(3):hover a{
+    color: #0D0D0D;
+}
+.cover .top li:nth-child(4):hover a{
+    color: #A62F03;
+}
+.cover .top li:last-child:hover a{
+    color: #A6A6A6;
+}
+.cover .down{
+    position: absolute;
+    right: 0;top: 50%;transform: translateX(-50%);margin-top: -200px;
+}
+.cover .down li{
+    margin-bottom: 50PX;
+}
+.cover .down li a{
+    font-size: 60px; color: #fff;font-weight: bold;
+}
+.cover .down li:first-child:hover a{
+    color: #404040;
+}
+.cover .down li:nth-child(2):hover a{
+    color: #4BBFC3;
+}
+.cover .down li:last-child:hover a{
+    color: #ddd;
+}
+header{
+    position: fixed;
+    left: 0;top: 0;background: rgba(255,255,255,0.6);
+    width: 100%;
+    z-index: 5;
+    padding: 30px 0;
+}
+header ul{
+    display: flex;justify-content: end;
+}
+header ul li{
+    margin: 0 20px;
+}
+header ul li a{
+    color: #fff;
+}
+
+header .web{
+    background: #000;
+}
+
+.cover .m_btn2 .line2{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.cover .m_btn2 .line2 span{
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: rgba(0,0,0,0);
+    position: fixed;
+    right: 200px;
+    top: 20%;
+    transform: translateY(-20%);
+    transition: all 0.5s ease;
+    
+}
+.cover .m_btn2 .line2 span::before{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: -14px;
+    transition: all 0.5s ease;
+    transform: rotate(45deg);
+    top: 0;
+}
+.cover .m_btn2 .line2 span::after{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    transition: all 0.5s ease;
+    transform: rotate(-45deg);
+    top: 0;
+}
+.cover .m_btn2 .line2.on span{
+    background: rgba(0,0,0,0);
+}
+.cover .m_btn2 .line2.on span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+.cover .m_btn2 .line2.on span::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#fullpage h1{
+    font-size: 6em;
+    text-align: center;color: #fff;
+}
+#fullpage .web .slide{
+    position: relative;
+    padding:0 200px;
+    box-sizing: border-box;
+}
+#fullpage .web img{
+    width: 400px;height: 400px; cursor: pointer;
+}
+#fullpage .web span{
+    position: absolute;left: 50%;top: 50px;transform: translateX(-50%);
+    color: #fff;font-size: 30px;
+    
+}
+#fullpage .web .slide p{
+    color: #fff;
+}
+
+#fullpage .footer .tit{
+    font-size: 12px;
+    line-height: 40px;
+    float: left;
+}
+#fullpage .footer .copy{
+    float: right;
+    font-size: 12px;
+    line-height: 40px;
+}
+#fullpage .footer p{
+    color: #fff;
+}
+#fullpage .contact .tit{
+    text-align: center; float: left; padding-left: 200px;
+}
+#fullpage .contact .tit h1{
+    margin-bottom: 50px;position: relative;
+
+}
+#fullpage .contact .tit h1::before{
+    content: '';
+    width: 100px;height: 2px;background: #fff;position: absolute;left: 50%;bottom: -10px;transform: translateX(-50%);
+
+}
+#fullpage .contact .tit p{
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+#fullpage .contact .cen{
+    position: absolute;
+    left: 50%;top: 50%;transform: translate(-50%,-50%);
+    
+}
+#fullpage .contact .cen fieldset{
+   
+}
+#fullpage .contact .cen input[type='text']{
+    width: 300px;height: 20px; border: 1px solid #ccc;
+}
+#fullpage .contact .cen .sou input{
+    width: 300px; height: 60px;
+}
+#fullpage .contact .cen input::placeholder{
+    text-indent: 10px;
+}
+#fullpage .contact .cen h2{
+    font-size: 20px;margin: 20px 0 20px 0;
+}
+#fullpage .contact .cen .send{
+    margin-top: 20px;float: right;border: 1px solid #ccc;
+}
+#fullpage .contact .cen legend{
+    font-size: 25px; color: #fff;
+}
+#fullpage .contact .cen span{
+    margin-left: 5px;
+}
+#fullpage .contact .map{
+    float: right; padding-right: 350px;
+}
+#fullpage .contact .map h2{
+    margin-bottom: 20px; color: #999;
+}
+#fullpage .contact .map h2 span{
+    margin-left: 5px; color: #fff;
+}
+#fullpage .web h1{
+    padding-top: 60px;box-sizing: border-box;
+}
+#fullpage .section .video{
+    width: 500px;box-sizing: border-box;
+position: absolute;right: -100px;top: 50%;transform: translateX(-50%);margin-top: -50px;
+}
+#fullpage .section .video video{
+    margin-top: 50px;
+    width: 500px;
+}
+#fullpage .section .video .movie{
+    border: 1px solid red;
+}
+#fullpage .section .video h2{
+    font-size: 35px;color: #6d6ceb;
+}
+#fullpage .section .txt{
+    float: right;
+  
+  margin: 300px 0 0 200px;
+  color: #fff;
+}
+#fullpage .section{
+    box-sizing: border-box;
+}
+#fullpage .section .txt h2{
+    font-size: 150px;
+    margin-bottom: 50px;
+}
+#fullpage .section .txt h3{
+    font-size: 130px;
+}
+#fullpage .section .h1box{
+    position: absolute;left: 0;top: 0;
+    box-sizing: border-box;
+    margin: 150px 0 0 100px;
+    width: 350px;height: 250px;background: red;
+}
+#fullpage .section  .name{
+    position: absolute;left: 200px;top: 50%;transform: translateX(-50%);
+    float: left;
+    
+}
+#fullpage .section  .dab{
+    position: absolute;left: 500px;top: 50%;transform: translateX(-50%);
+    float: left;
+    
+}
+#fullpage .section  .name li{
+    font-size: 35px;color: #6d6ceb;
+    margin-bottom: 25px;
+}
+#fullpage .section  .dab li{
+    font-size: 35px;color: #f3718d;
+    margin-bottom: 25px;
+}
+#fullpage .section .h1box h1{
+   display: block;padding-top: 130px;
+}
+#fullpage .section .education{
+    position: absolute;left: 50%;top: 200px;transform: translateX(-50%);
+}
+#fullpage .section .license{
+    position: absolute;left: 50%;top: 500px;transform: translateX(-50%);
+    margin-left: -100px;
+ 
+}
+#fullpage .section .license h2{
+    font-size: 35px;color: #6d6ceb;
+    margin-bottom: 50px;
+}
+#fullpage .section .education h2{
+    font-size: 35px;color: #6d6ceb;
+    margin-bottom: 50px;
+}
+#fullpage .section .license  li{
+    font-size: 20px; color: #fff;
+    margin-bottom: 20px;
+}
+#fullpage .section .education li{
+    font-size: 20px; color: #fff;
+    margin-bottom: 20px;
+}
+#fullpage .section .education li:last-child{
+    margin-bottom: 0;
+}
+#fullpage .works h1{
+   padding-top: 160px;box-sizing: border-box;
+   margin-bottom: 50px;
+   
+}
+#fullpage .works{
+    text-align: center;
+}
+#fullpage .works .slide{
+    display: flex; justify-content: space-between;
+    margin-top: 100px; 
+}
+#fullpage .works .slide div{
+    margin-right: 50px; margin-left: 100px;
+}
+#fullpage .works .images{
+   position: relative;overflow: hidden;float: left;
+    
+}
+
+#fullpage .works .daelim{
+  overflow: hidden;width: 390px;height: 220px;float: left;
+}
+#fullpage .works .daelim img{
+    width: 390px;height: 195px;
+}
+#fullpage .works .canon{overflow: hidden;
+    width: 390px;height: 220px;float: left;
+}
+#fullpage .works .canon img{
+    width: 390px;height: 195px; 
+}
+#fullpage .works .daelim p{
+ 
+}
+#fullpage .works p{
+    margin-top: 5px;
+    text-align: left;color: #fff;
+}
+#fullpage .works .images img{
+    width: 390px;height: 195px;
+}
+#fullpage .works .slide{
+   
+
+}
+.fp-controlArrow .fp-prev{
+   background: red;
+}
+#fullpage .works  span{
+    font-size: 25px;color: #fff;position: absolute;top: 0;transform: translateX(-50%);margin-left: -40px;
+}
+
+/* -----------모바일------------ */
+#fullpage .works .m_one{
+    width: 300px;height: 200px;float: left; 
+}
+#fullpage .works .m_one img{
+    width: 300px;height: 300px;
+}
+#fullpage .works .m_two{
+    width: 300px;height: 200px;float: left;
+}
+#fullpage .works .m_two img{
+    width: 300px;height: 300px;
+}
+#fullpage .works .m_thr{
+    width: 300px;height: 200px;float: left;
+}
+#fullpage .works .m_thr img{
+    width: 300px;height: 300px;
+}
+#fullpage .works .m_wrap{
+    padding-left:50px;height: 400px; 
+}
+/* --------반응형----------- */
+#fullpage .works  .r_wrap{
+    width: 1920px;
+}
+#fullpage .works  .r_wrap .r_one{
+    width:840px; margin-left: -100px;
+float: left;
+}
+#fullpage .works .r_one li{
+    float: left; margin-right: 20px;
+}
+#fullpage .works .r_one .rr img{
+    width: 500px; height: 400px;
+}
+#fullpage .works .r_one .oo img{
+    width: 300px; height: 300px; margin-top: 100px;margin-bottom: 10px;
+}
+#fullpage .works .r_one p{
+   
+    clear: both;
+}
+
+#fullpage .works  .r_wrap .r_two{
+    width:850px;  margin-left: 0;float: left;
+
+}
+#fullpage .works .r_two li{
+    float: left; margin-right: 20px;
+}
+#fullpage .works .r_two .rr img{
+    width: 500px; height: 400px;
+}
+#fullpage .works .r_two .oo img{
+    width: 300px; height: 300px; margin-top: 100px;margin-bottom: 10px;
+}
+#fullpage .works .r_two p{
+   
+    clear: both;
+}
+#fullpage .thr span{
+  margin-left: -100px;
+}
+
+
